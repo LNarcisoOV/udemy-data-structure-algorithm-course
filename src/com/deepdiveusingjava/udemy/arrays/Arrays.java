@@ -66,7 +66,7 @@ public class Arrays {
 		System.out.println("--------------------------------------------------------------------------------");
 	}
 	
-	private static int[] createIntArray() {
+	public static int[] createIntArray() {
 		int[] intArray = new int[7];
 
 		intArray[0] = 20;
