@@ -23,6 +23,7 @@ public class SelectionSort {
 				+ "because it will compare the current value against the largest \nelement and passing only the "
 				+ "index with the biggest value \nto be replaced in the last unsorted index. \n"
 				+ "It's an unstable algorithm, so it will swap \nelements with that same value. \n"
+				+ "In a nutshell this algorithm will sort the array putting the biggest value \nin the last unsorted index.\n"
 				+ "Big-O: O(N²);");
 	}
 
