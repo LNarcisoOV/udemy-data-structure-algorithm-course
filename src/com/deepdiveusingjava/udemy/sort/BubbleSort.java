@@ -21,7 +21,7 @@ public class BubbleSort {
 
 		System.out.println("\nOne of the most inefficient algorithms for sorting.\n"
 				+ "Bubble sort is a stable algorithm, because it will preserve the order of \n"
-				+ "the same elements, in this 'If': if (intArray[j] > intArray[j + 1]), \n"
+				+ "the same elements in this 'If': if (intArray[j] > intArray[j + 1]), \n"
 				+ "to be an unstable algorithm we will need to change this algorithm and put \n"
 				+ "'>=' instead of '>' in the 'If'. Change this comparison will do \n"
 				+ "the algorithm swap elements with the same value.\n"

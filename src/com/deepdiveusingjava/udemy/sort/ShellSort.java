@@ -34,7 +34,8 @@ public class ShellSort {
 		System.out.println("- Difficult to nail down the time complexity because \nit will depend on the gap. \n"
 				+ "- Doesn't require as much shifting as insertion sort, \nusually performs better. \n"
 				+ "- Unstable algorithm. ");
-		System.out.println("- Big-O: O(n²); in the worst case.");
+		System.out.println("- Big-O: O(N²); in the worst case.");
+		
 
 	}
 
