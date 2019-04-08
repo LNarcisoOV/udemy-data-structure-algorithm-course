@@ -24,7 +24,7 @@ public class SelectionSort {
 				+ "index with the biggest value \nto be replaced in the last unsorted index. \n"
 				+ "It's an unstable algorithm, so it will swap \nelements with that same value. \n"
 				+ "In a nutshell this algorithm will sort the array putting the biggest value \nin the last unsorted index.\n"
-				+ "Big-O: O(N²);");
+				+ "Big-O: O(N²); in the worst case.");
 	}
 
 	private static void sort(int[] intArray) {
