@@ -8,7 +8,7 @@ public class RecursionClass {
 		System.out.println("1! = 1 * 0! = 1; ");
 		System.out.println("2! = 2 * 1 = 2 * 1! = 2; ");
 		System.out.println("3! = 3 * 2 * 1 = 3 * 2! = 6; ");
-		System.out.println("4! = 4 * 3 * 2 * 1 = 4 * 3! = 24 ");
+		System.out.println("4! = 4 * 3 * 2 * 1 = 4 * 3! = 24; ");
 		System.out.println("... ");
 		System.out.println("\nFormula: ");
 		System.out.println("n! = n * (n-1)! ");

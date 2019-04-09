@@ -5,6 +5,8 @@ import com.deepdiveusingjava.udemy.arrays.Arrays;
 public class SelectionSort {
 
 	public static void main(String[] args) {
+		System.out.println("::::: SELECTION SORT :::::  \n");
+		
 		int intArray[] = Arrays.createIntArray();
 
 		System.out.println("Unsorted array: ");

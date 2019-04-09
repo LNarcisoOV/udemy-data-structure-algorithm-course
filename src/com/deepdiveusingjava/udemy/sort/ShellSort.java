@@ -4,6 +4,8 @@ import com.deepdiveusingjava.udemy.arrays.Arrays;
 
 public class ShellSort {
 	public static void main(String args[]) {
+		System.out.println("::::: SHELL SORT :::::  \n");
+		
 		int intArray[] = Arrays.createIntArray();
 
 		System.out.println("Unsorted array: ");
