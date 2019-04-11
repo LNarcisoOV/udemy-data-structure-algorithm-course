@@ -79,5 +79,22 @@ public class Arrays {
 
 		return intArray;
 	}
+	
+	public static int[] createIntArrayForCountingSort(){
+		int[] intArray = new int[10];
+		
+		intArray[0] = 2;
+		intArray[1] = 5;
+		intArray[2] = 9;
+		intArray[3] = 8;
+		intArray[4] = 2;
+		intArray[5] = 8;
+		intArray[6] = 7;
+		intArray[7] = 10;
+		intArray[8] = 4;
+		intArray[9] = 3;
+		
+		return intArray;
+	}
 
 }
