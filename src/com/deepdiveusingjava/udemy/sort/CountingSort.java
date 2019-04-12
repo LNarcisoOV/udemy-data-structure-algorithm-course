@@ -1,13 +1,13 @@
 package com.deepdiveusingjava.udemy.sort;
 
-import com.deepdiveusingjava.udemy.arrays.Arrays;
+import com.deepdiveusingjava.udemy.arrays.MainArray;
 
 public class CountingSort {
 
 	public static void main(String[] args) {
 		System.out.println("::::: COUNTING SORT ::::: \n");
 
-		int intArray[] = Arrays.createIntArrayForCountingSort();
+		int intArray[] = MainArray.createIntArrayForCountingSort();
 
 		System.out.println("Unsorted array: ");
 		for (int i = 0; i < intArray.length; i++) {

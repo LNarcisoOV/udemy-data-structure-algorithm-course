@@ -1,12 +1,12 @@
 package com.deepdiveusingjava.udemy.sort;
 
-import com.deepdiveusingjava.udemy.arrays.Arrays;
+import com.deepdiveusingjava.udemy.arrays.MainArray;
 
 public class QuickSort {
 	public static void main(String args[]) {
 		System.out.println("::::: QUICK SORT ::::: \n");
 
-		int intArray[] = Arrays.createIntArray();
+		int intArray[] = MainArray.createIntArray();
 
 		System.out.println("Unsorted array: ");
 		for (int i = 0; i < intArray.length; i++) {

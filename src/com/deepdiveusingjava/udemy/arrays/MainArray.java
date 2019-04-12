@@ -1,6 +1,6 @@
 package com.deepdiveusingjava.udemy.arrays;
 
-public class Arrays {
+public class MainArray {
 
 	public static void main(String[] args) {
 		pros();
