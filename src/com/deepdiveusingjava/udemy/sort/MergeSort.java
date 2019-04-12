@@ -52,7 +52,7 @@ public class MergeSort {
 
 	private static void merge(int[] inputArray, int start, int mid, int end) {
 		// it means, if we have values fewer in the left array
-		// than right array, we don't have to do anything.
+		// than right the array, we don't have to do anything.
 		if (inputArray[mid - 1] <= inputArray[mid]) {
 			return;
 		}

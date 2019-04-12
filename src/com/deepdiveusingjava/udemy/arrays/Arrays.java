@@ -98,14 +98,14 @@ public class Arrays {
 	}
 	
 	public static int[] createIntArrayForRadixSort(){
-		int[] intArray = new int[10];
+		int[] intArray = new int[6];
 		
 		intArray[0] = 4725;
 		intArray[1] = 4586;
 		intArray[2] = 1330;
 		intArray[3] = 8792;
 		intArray[4] = 1594;
-		intArray[4] = 5729;
+		intArray[5] = 5729;
 		
 		return intArray;
 	}
