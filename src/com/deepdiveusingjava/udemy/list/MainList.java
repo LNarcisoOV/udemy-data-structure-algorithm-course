@@ -3,7 +3,7 @@ package com.deepdiveusingjava.udemy.list;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainList {
 
 	public static void main(String[] args) {
 		System.out.println("::::: LIST EXAMPLES :::::");
