@@ -1,4 +1,4 @@
-package com.deepdiveusingjava.recursion;
+package com.deepdiveusingjava.udemy.recursion;
 
 public class RecursionClass {
 	public static void main(String args[]) {
