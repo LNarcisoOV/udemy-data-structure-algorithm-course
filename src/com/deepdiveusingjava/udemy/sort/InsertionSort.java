@@ -33,7 +33,7 @@ public class InsertionSort {
 		System.out.println();
 		System.out.println();
 
-		video40InsertionSortedDescendingArray();
+		video40InsertionSortedRecursiveArray();
 	}
 
 	private static void insertionRecursionSort(int intArray[]) {
@@ -50,7 +50,7 @@ public class InsertionSort {
 		}
 	}
 
-	private static void video40InsertionSortedDescendingArray() {
+	private static void video40InsertionSortedRecursiveArray() {
 		System.out.println("::::: VIDEO 40 CHALLENGE ::::: ");
 		System.out.println("::::: INSERTION SORT WIRH RECURSION :::::  \n");
 
