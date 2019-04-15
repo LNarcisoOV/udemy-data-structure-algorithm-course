@@ -61,7 +61,7 @@ public class InsertionSort {
 			System.out.println(intArray[i]);
 		}
 
-		insertionSortRecursive(intArray, 1, intArray.length);
+		insertionSortRecursive(intArray, intArray.length);
 
 		System.out.println("\nInsertion sorted recursive array: ");
 		for (int i = 0; i < intArray.length; i++) {
@@ -70,22 +70,20 @@ public class InsertionSort {
 
 	}
 
-	private static void insertionSortRecursive(int[] intArray, int start, int end) {
-		if (start == end) {
+	private static void insertionSortRecursive(int[] intArray, int numItems) {
+		if (numItems < 2) {
 			return;
 		}
 
-		int newElement = intArray[start];
-		int i = start;
+		insertionSortRecursive(intArray, numItems - 1);
 
-		if (intArray[start - 1] > intArray[start]) {
-			intArray[start] = intArray[start - 1];
-			intArray[start - 1] = newElement;
-			i = 1;
-		} else {
-			i++;
+		int newElement = intArray[numItems - 1];
+		int i;
+
+		for (i = numItems - 1; i > 0 && intArray[i - 1] > newElement; i--) {
+			intArray[i] = intArray[i - 1];
 		}
 
-		insertionSortRecursive(intArray, i, end);
+		intArray[i] = newElement;
 	}
 }
