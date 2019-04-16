@@ -1,4 +1,4 @@
-package com.deepdiveusingjava.udemy.list;
+package com.deepdiveusingjava.udemy.model;
 
 public class Employee {
 

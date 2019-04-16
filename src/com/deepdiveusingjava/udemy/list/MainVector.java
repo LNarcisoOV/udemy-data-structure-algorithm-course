@@ -3,6 +3,8 @@ package com.deepdiveusingjava.udemy.list;
 import java.util.List;
 import java.util.Vector;
 
+import com.deepdiveusingjava.udemy.model.Employee;
+
 public class MainVector {
 	public static void main(String[] args) {
 		System.out.println("::::: VECTOR EXAMPLES :::::");

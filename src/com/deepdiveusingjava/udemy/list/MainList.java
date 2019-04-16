@@ -3,6 +3,8 @@ package com.deepdiveusingjava.udemy.list;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.deepdiveusingjava.udemy.model.Employee;
+
 public class MainList {
 
 	public static void main(String[] args) {
