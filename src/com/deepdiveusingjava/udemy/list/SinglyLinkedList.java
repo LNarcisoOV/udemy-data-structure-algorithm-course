@@ -4,6 +4,8 @@ import com.deepdiveusingjava.udemy.model.Employee;
 
 public class SinglyLinkedList {
 	public static void main(String[] args) {
+		System.out.println("::::: SINGLY LINKED LIST :::::");
+		System.out.println();
 
 		System.out.println("It's called SINGLY LINKED LIST because we have two fields, ");
 		System.out.println("but only one field in each node to store the reference of ");
@@ -41,17 +43,15 @@ public class SinglyLinkedList {
 		System.out.println("	-Assign HEAD to 'Jane'.");
 		System.out.println("	-Return 'removedNode'.");
 		System.out.println("- Big-O: O(1);");
-
+		System.out.println("----------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
+		
 		
 		creatingPopulatingAndShowingEmployeeSinglyLinkedList();
 	}
 
 	private static void creatingPopulatingAndShowingEmployeeSinglyLinkedList() {
-		System.out.println("::::: EMPLOYEE SINGLY LINKED LIST :::::");
-		System.out.println();
-		
 		Employee janeJones = new Employee(123, "Jane", "Jones");
 		Employee johnDoe = new Employee(4567, "John", "Doe");
 		Employee marySmith = new Employee(22, "Mary", "Smith");
