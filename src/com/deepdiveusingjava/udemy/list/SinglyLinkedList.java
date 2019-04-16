@@ -1,17 +1,16 @@
 package com.deepdiveusingjava.udemy.list;
 
 import com.deepdiveusingjava.udemy.model.Employee;
-import com.deepdiveusingjava.udemy.model.EmployeeSinglyLinkedList;
 
 public class SinglyLinkedList {
 	public static void main(String[] args) {
 
-		System.out.println("It's called SINGLY LINKED LIST because we have only one");
-		System.out.println("field in each node to store the reference of the next");
-		System.out.println("item. So we wi'll do only insertions and deletions in");
+		System.out.println("It's called SINGLY LINKED LIST because we have two fields, ");
+		System.out.println("but only one field in each node to store the reference of ");
+		System.out.println("the next item. So we wi'll do only insertions and deletions in");
 		System.out.println("the 'HEAD' of the list.");
 		System.out.println();
-		System.out.println("Differently from array list, linked list aren't  ");
+		System.out.println("Differently from array list, linked list aren't");
 		System.out.println("backed by arrays. Linked lists has two fields in each 'node', ");
 		System.out.println("the first field is the object itself, the second field is a ");
 		System.out.println("pointer with the reference to he next 'node' in the list.");
@@ -40,16 +39,16 @@ public class SinglyLinkedList {
 		System.out.println("- Steps to delete an item in the list:");
 		System.out.println("	-Assign 'Bill' to a temporary variable 'removedNode'.");
 		System.out.println("	-Assign HEAD to 'Jane'.");
-		System.out.println("	-return 'removedNode'.");
+		System.out.println("	-Return 'removedNode'.");
 		System.out.println("- Big-O: O(1);");
 
 		System.out.println();
 		System.out.println();
 		
-		creatingPopulatingsAndShowingEmployeeSinglyLinkedList();
+		creatingPopulatingAndShowingEmployeeSinglyLinkedList();
 	}
 
-	private static void creatingPopulatingsAndShowingEmployeeSinglyLinkedList() {
+	private static void creatingPopulatingAndShowingEmployeeSinglyLinkedList() {
 		System.out.println("::::: EMPLOYEE SINGLY LINKED LIST :::::");
 		System.out.println();
 		

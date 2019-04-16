@@ -1,4 +1,7 @@
-package com.deepdiveusingjava.udemy.model;
+package com.deepdiveusingjava.udemy.list;
+
+import com.deepdiveusingjava.udemy.model.Employee;
+import com.deepdiveusingjava.udemy.model.EmployeeNode;
 
 public class EmployeeSinglyLinkedList {
 
