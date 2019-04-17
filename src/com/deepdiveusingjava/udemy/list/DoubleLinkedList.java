@@ -71,6 +71,7 @@ public class DoubleLinkedList {
 		list.addToFront(mikeWilson);
 		list.printList();
 
+		System.out.println();
 		System.out.println("ADDING ITEMS TO THE END OF LIST:");
 		System.out.println("----------------------------------------------------------------------");
 		Employee billEnd = new Employee(78, "Bill", "End");
@@ -79,11 +80,13 @@ public class DoubleLinkedList {
 		list.addToEnd(carlosEnd);
 		list.printList();
 
+		System.out.println();
 		System.out.println("REMOVING MIKE WILSON OF THE LIST:");
 		System.out.println("----------------------------------------------------------------------");
 		list.removeFromFront();
 		list.printList();
 
+		System.out.println();
 		System.out.println("REMOVING CARLOS END OF THE LIST:");
 		System.out.println("----------------------------------------------------------------------");
 		list.removeFromEnd();
