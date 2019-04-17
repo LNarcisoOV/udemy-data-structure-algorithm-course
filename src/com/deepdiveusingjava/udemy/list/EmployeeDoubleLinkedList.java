@@ -79,8 +79,8 @@ public class EmployeeDoubleLinkedList {
 				newNode.setNext(empNodeToBeReplaced);
 				head = newNode;
 			} else {
-				//Searching the desired element and swapping it 
-				//in a recursive way.
+				//Searching the desired element and changing its 
+				//references in a recursive way.
 				percourListFindItemAndSwapIt(newNode, empNodeToBeReplaced, current);
 			}
 
