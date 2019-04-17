@@ -59,6 +59,53 @@ public class EmployeeDoubleLinkedList {
 		return size;
 	}
 
+	public void addBefore(Employee current, Employee newEmployeeNode) {
+		EmployeeNode newNode = new EmployeeNode(newEmployeeNode);
+		EmployeeNode empNodeToBeReplaced = null;
+
+		if (isEmpty()) {
+			head = newNode;
+		} else {
+
+			// If the current parameter is null.
+			if (current == null) {
+				current = head.getEmployee();
+			}
+
+			empNodeToBeReplaced = head;
+
+			// If there's only one item in the list.
+			if (empNodeToBeReplaced.getNext() == null) {
+				newNode.setNext(empNodeToBeReplaced);
+				head = newNode;
+			} else {
+				//Searching the desired element and swapping it 
+				//in a recursive way.
+				percourListFindItemAndSwapIt(newNode, empNodeToBeReplaced, current);
+			}
+
+		}
+	}
+
+	private void percourListFindItemAndSwapIt(EmployeeNode newNode, EmployeeNode empNodeToBeReplaced, Employee current) {
+		if (empNodeToBeReplaced != null && empNodeToBeReplaced.getEmployee().getId() == current.getId()) {
+			swapElements(newNode, empNodeToBeReplaced);
+			return;
+		}
+		percourListFindItemAndSwapIt(newNode, empNodeToBeReplaced.getNext(), current);
+	}
+
+	private void swapElements(EmployeeNode newNode, EmployeeNode empNodeToBeReplaced) {
+		newNode.setNext(empNodeToBeReplaced);
+		if (empNodeToBeReplaced.getPrevious() == null) {
+			head = newNode;
+		} else {
+			empNodeToBeReplaced.getPrevious().setNext(newNode);
+			newNode.setPrevious(empNodeToBeReplaced.getPrevious());
+			empNodeToBeReplaced.setPrevious(newNode);
+		}
+	}
+
 	public void printList() {
 		EmployeeNode current = head;
 		System.out.print("HEAD -> ");

@@ -1,6 +1,7 @@
 package com.deepdiveusingjava.udemy.list;
 
 import com.deepdiveusingjava.udemy.model.Employee;
+import com.deepdiveusingjava.udemy.model.EmployeeNode;
 
 public class DoubleLinkedList {
 	public static void main(String[] args) {
@@ -91,6 +92,33 @@ public class DoubleLinkedList {
 		System.out.println("----------------------------------------------------------------------");
 		list.removeFromEnd();
 		list.printList();
+		
+		System.out.println();
+		System.out.println();
+		video53Challenge();
+	}
+	 
 
+	private static void video53Challenge() {
+		System.out.println("VIDEO 53 CHALLENGE:");
+		System.out.println("----------------------------------------------------------------------");
+		
+		Employee janeJones = new Employee(123, "Jane", "Jones");
+		Employee johnDoe = new Employee(4567, "John", "Doe");
+		Employee marySmith = new Employee(22, "Mary", "Smith");
+		Employee mikeWilson = new Employee(3245, "Mike", "Wilson");
+		Employee newEmployeeToAddBefore = new Employee(30, "newEmployee", "toAddBefore");
+		
+		EmployeeDoubleLinkedList list = new EmployeeDoubleLinkedList();
+		list.addToFront(janeJones);
+		list.addToFront(johnDoe);
+		list.addToFront(marySmith);
+		list.addToFront(mikeWilson);
+		
+		list.addBefore(marySmith, newEmployeeToAddBefore);
+		
+//		list.addBefore(null, newEmployeeToAddBefore);
+		
+		list.printList();
 	}
 }
