@@ -3,7 +3,6 @@ package com.deepdiveusingjava.udemy.stack;
 import java.util.LinkedList;
 
 import com.deepdiveusingjava.udemy.model.Employee;
-import com.deepdiveusingjava.udemy.model.EmployeeNode;
 
 public class LinkedStack {
 	LinkedList<Employee> stack;
@@ -28,7 +27,7 @@ public class LinkedStack {
 		return stack.isEmpty();
 	}
 	
-	public void printList(){
+	public void printStack(){
 		System.out.print("HEAD -> ");
 		for(Employee emp : stack){
 			System.out.print(emp.toString());

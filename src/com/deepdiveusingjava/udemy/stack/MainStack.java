@@ -39,7 +39,7 @@ public class MainStack {
 		stack.push(marySmith);
 		stack.push(mikeWilson);
 		
-		stack.printList();
+		stack.printStack();
 		
 		System.out.println("----------------------------------------------------------------------");
 		System.out.println("Peek:");
@@ -51,7 +51,7 @@ public class MainStack {
 		
 		System.out.println("----------------------------------------------------------------------");
 		System.out.println("Stack after pop:");
-		stack.printList();
+		stack.printStack();
 		
 	}
 }
