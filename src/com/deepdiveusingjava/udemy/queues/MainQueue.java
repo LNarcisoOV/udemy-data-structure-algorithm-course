@@ -62,7 +62,7 @@ public class MainQueue {
 		Employee marySmith = new Employee(22, "Mary", "Smith");
 		Employee mikeWilson = new Employee(3245, "Mike", "Wilson");
 		
-		ArrayQueue circularlyQueue = new ArrayQueue(10);
+		CircularlyArrayQueue circularlyQueue = new CircularlyArrayQueue(10);
 		circularlyQueue.enqueue(janeJones);
 		circularlyQueue.enqueue(johnDoe);
 		circularlyQueue.enqueue(marySmith);
