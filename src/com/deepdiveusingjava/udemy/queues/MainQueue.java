@@ -20,6 +20,7 @@ public class MainQueue {
 		System.out.println();
 
 		creatingPopulatingAndShowingQueue();
+		creatingPopulatingAndShowingCircularlyQueue();
 	}
 
 	private static void creatingPopulatingAndShowingQueue() {
@@ -47,6 +48,43 @@ public class MainQueue {
 		System.out.println("----------------------------------------------------------------------");
 		System.out.println("PEEK: ");
 		System.out.println(queue.peek());
+		System.out.println("----------------------------------------------------------------------");
+		System.out.println();
+		System.out.println();
+	}
+
+	private static void creatingPopulatingAndShowingCircularlyQueue() {
+		System.out.println("::::: CIRCULARLY QUEUE :::::");
+		System.out.println("----------------------------------------------------------------------");
+		
+		Employee janeJones = new Employee(123, "Jane", "Jones");
+		Employee johnDoe = new Employee(4567, "John", "Doe");
+		Employee marySmith = new Employee(22, "Mary", "Smith");
+		Employee mikeWilson = new Employee(3245, "Mike", "Wilson");
+		
+		ArrayQueue circularlyQueue = new ArrayQueue(10);
+		circularlyQueue.enqueue(janeJones);
+		circularlyQueue.enqueue(johnDoe);
+		circularlyQueue.enqueue(marySmith);
+		circularlyQueue.enqueue(mikeWilson);
+		circularlyQueue.enqueue(janeJones);
+		circularlyQueue.enqueue(johnDoe);
+		circularlyQueue.enqueue(marySmith);
+		circularlyQueue.enqueue(mikeWilson);
+		circularlyQueue.enqueue(janeJones);
+		circularlyQueue.enqueue(johnDoe);
+		circularlyQueue.enqueue(marySmith);
+		circularlyQueue.enqueue(mikeWilson);
+		circularlyQueue.enqueue(janeJones);
+		circularlyQueue.enqueue(johnDoe);
+		circularlyQueue.enqueue(marySmith);
+		circularlyQueue.enqueue(mikeWilson);
+		circularlyQueue.enqueue(janeJones);
+		circularlyQueue.enqueue(johnDoe);
+		circularlyQueue.enqueue(marySmith);
+		circularlyQueue.enqueue(mikeWilson);
+
+		circularlyQueue.print();
 
 	}
 
