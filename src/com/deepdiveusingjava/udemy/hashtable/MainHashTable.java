@@ -17,6 +17,7 @@ public class MainHashTable {
 		System.out.println("- Optimized retrivial(when you know the key).");
 		System.out.println("and return its item.");
 		System.out.println("- Associative array is on type of hash table.");
+		System.out.println();
 		System.out.println("::: HASHING :::");
 		System.out.println("- Maps keys of any data type to an integer.");
 		System.out.println("- Hash function maps key to int.");
@@ -25,6 +26,7 @@ public class MainHashTable {
 		System.out.println("the same hashed value.");
 		System.out.println("- Store the value at the hashed ky value - this is ");
 		System.out.println("the index into the array. ");
+		System.out.println();
 		System.out.println("::: LOAD FACTOR :::");
 		System.out.println("- Tells us how full a hash table is.");
 		System.out.println("- LOAD FACTOR = # OF ITEMS / CAPACITY = SIZE / CAPACITY.");
@@ -35,6 +37,11 @@ public class MainHashTable {
 		System.out.println("likelihood of collisions).");
 		System.out.println("- Can play a role in determining the time complexity");
 		System.out.println("for retrieval.");
+		System.out.println();
+		System.out.println("::: LINEAR PROBING :::");
+		System.out.println("- Avoiding the collisions, we'll implement linear probing, ");
+		System.out.println("which will search for the next empty slot to add a new item.");
+		System.out.println("If the HashTable if full, we can't add the new item.");
 
 		System.out.println();
 		System.out.println();
@@ -59,6 +66,7 @@ public class MainHashTable {
 		ht.print();
 		
 		System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+		System.out.println("Retrieve key Smith: " + ht.get("Smith"));
 
 	}
 }
