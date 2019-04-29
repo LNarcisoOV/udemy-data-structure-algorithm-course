@@ -33,6 +33,11 @@ public class MainQueue {
 		System.out.println();
 
 		JDKQueue();
+
+		System.out.println();
+		System.out.println();
+
+		video59Challenge();
 	}
 
 	private static void creatingPopulatingAndShowingQueue() {
@@ -135,5 +140,34 @@ public class MainQueue {
 		for (Employee employee : queue) {
 			System.out.println(employee);
 		}
+	}
+
+	private static void video59Challenge() {
+		System.out.println("'Dad' is a palindrome? " + checkForPalindrome("dad"));
+		System.out.println("'Hello' is a palindrome? " + checkForPalindrome("hello"));
+		System.out.println("'I did, did I' is a palindrome? " + checkForPalindrome("I did, did I?"));
+
+	}
+
+	private static boolean checkForPalindrome(String string) {
+		LinkedList<Character> queue = new LinkedList<Character>();
+		LinkedList<Character> stack = new LinkedList<Character>();
+		String lowerCase = string.toLowerCase();
+
+		for (int i = 0; i < lowerCase.length(); i++) {
+			char c = lowerCase.charAt(i);
+			if (c >= 'a' && c <= 'z') {
+				queue.add(c);
+				stack.push(c);
+			}
+		}
+
+		while (!stack.isEmpty()) {
+			if (!stack.pop().equals(queue.removeFirst())) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 }
