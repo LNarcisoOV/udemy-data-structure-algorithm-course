@@ -63,10 +63,20 @@ public class MainHashTable {
 		ht.put("Wilson", mikeWilson);
 		ht.put("End", billEnd);
 		
+		System.out.println("Adding employees:");
+		ht.print();
+		
+		System.out.println("Getting employees:");
+		System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+		System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+		
+		System.out.println();
+		System.out.println("Removing employees Wilson and Jones:");
+		ht.remove("Wilson");
+		ht.remove("Jones");
 		ht.print();
 		
 		System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
-		System.out.println("Retrieve key Smith: " + ht.get("Smith"));
 
 	}
 }
