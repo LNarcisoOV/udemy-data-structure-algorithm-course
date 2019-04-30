@@ -46,10 +46,12 @@ public class MainHashTable {
 		System.out.println();
 		System.out.println();
 
-		creatingPopulatingAndWorkingHashTable();
+		creatingPopulatingAndWorkingWithHashTable();
+		creatingPopulatingAndWorkingWithChainedHashTable();
 	}
 
-	private static void creatingPopulatingAndWorkingHashTable() {
+	private static void creatingPopulatingAndWorkingWithHashTable() {
+		System.out.println("::: SIMPLE HASH TABLE :::");
 		Employee janeJones = new Employee(123, "Jane", "Jones");
 		Employee johnDoe = new Employee(4567, "John", "Doe");
 		Employee marySmith = new Employee(22, "Mary", "Smith");
@@ -77,6 +79,38 @@ public class MainHashTable {
 		ht.print();
 		
 		System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+		System.out.println();
+		System.out.println();
+	}
+	
+	private static void creatingPopulatingAndWorkingWithChainedHashTable() {
+		System.out.println("::: CHAINED HASH TABLE :::");
+		Employee janeJones = new Employee(123, "Jane", "Jones");
+		Employee johnDoe = new Employee(4567, "John", "Doe");
+		Employee marySmith = new Employee(22, "Mary", "Smith");
+		Employee mikeWilson = new Employee(3245, "Mike", "Wilson");
+		Employee billEnd = new Employee(78, "Bill", "End");
 
+		ChainedHashTable ht = new ChainedHashTable();
+		ht.put("Jones", janeJones);
+		ht.put("Doe", johnDoe);
+		ht.put("Smith", marySmith);
+		ht.put("Wilson", mikeWilson);
+		ht.put("End", billEnd);
+		
+		System.out.println("Adding employees:");
+		ht.print();
+		
+		System.out.println("Getting employees:");
+		System.out.println("Retrieve key Jones: " + ht.get("Jones"));
+		System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+		
+		System.out.println();
+		System.out.println("Removing employees Wilson and Jones:");
+		ht.remove("Wilson");
+		ht.remove("Jones");
+		ht.print();
+//		
+		System.out.println("Retrieve key Smith: " + ht.get("Smith"));
 	}
 }
