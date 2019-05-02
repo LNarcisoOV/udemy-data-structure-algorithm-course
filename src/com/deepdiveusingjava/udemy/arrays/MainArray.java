@@ -121,5 +121,19 @@ public class MainArray {
 
 		return stringArray;
 	}
+	
+	public static int[] createIntArrayForBucketSort() {
+		int[] intArray = new int[7];
+
+		intArray[0] = 54;
+		intArray[1] = 46;
+		intArray[2] = 83;
+		intArray[3] = 66;
+		intArray[4] = 95;
+		intArray[5] = 92;
+		intArray[6] = 43;
+
+		return intArray;
+	}
 
 }
