@@ -1,6 +1,7 @@
 package com.deepdiveusingjava.udemy.hashtable;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 import com.deepdiveusingjava.udemy.model.Employee;
@@ -53,6 +54,7 @@ public class MainHashTable {
 		creatingPopulatingAndWorkingWithChainedHashTable();
 		creatingPopulatingAndWorkingWithJDKHashTable();
 		video80HashChallenge();
+		video82HashChallenge();
 	}
 
 	private static void creatingPopulatingAndWorkingWithHashTable() {
@@ -197,11 +199,37 @@ public class MainHashTable {
 		for (int i = 0; i < nums.length; i++) {
 			System.out.println(nums[i]);
 		}
+		System.out.println();
+		System.out.println();
+	}
 
+	private static void video82HashChallenge() {
+		System.out.println("::: VIDEO 82 DUPLICATE REMOVER CHALLENGE :::");
+		LinkedList<Employee> employees = new LinkedList<>();
+		employees.add(new Employee(123, "Jane", "Jones"));
+		employees.add(new Employee(5678, "John", "Doe"));
+		employees.add(new Employee(45, "Mike", "Wilson"));
+		employees.add(new Employee(5555, "Mary", "Smith"));
+		employees.add(new Employee(5678, "John", "Doe"));
+		employees.add(new Employee(3948, "Bill", "End"));
+		employees.add(new Employee(123, "Jane", "Jones"));
+		
+		System.out.println();
+		System.out.println("Original list:");
+		employees.forEach(o -> System.out.println(o));
+
+		HashMap<Integer, Employee> hashMap = new HashMap<>();
+		for (Employee emp : employees) {
+			hashMap.putIfAbsent(emp.getId(), emp);
+		}
+		
+		System.out.println();
+		System.out.println("HashMap without duplicates:");
+		hashMap.forEach((k,v) -> System.out.println("Key: " + k + ", " + v));
 	}
 
 	private static int hash(int value) {
-		//Returning the last digit of the value.
+		// Returning the last digit of the value.
 		return Math.abs(value % 10);
 	}
 }
