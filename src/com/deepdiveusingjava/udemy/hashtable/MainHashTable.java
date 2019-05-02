@@ -52,6 +52,7 @@ public class MainHashTable {
 		creatingPopulatingAndWorkingWithHashTable();
 		creatingPopulatingAndWorkingWithChainedHashTable();
 		creatingPopulatingAndWorkingWithJDKHashTable();
+		video80HashChallenge();
 	}
 
 	private static void creatingPopulatingAndWorkingWithHashTable() {
@@ -135,9 +136,9 @@ public class MainHashTable {
 		hashMap.put("Smith", marySmith);
 		hashMap.put("Wilson", mikeWilson);
 		hashMap.put("End", billEnd);
-		hashMap.forEach((k,v) -> System.out.println("Key: '" + k + "', "+ v));
+		hashMap.forEach((k, v) -> System.out.println("Key: '" + k + "', " + v));
 		System.out.println("*See that the order is different of we add.");
-		
+
 		System.out.println();
 		System.out.println("Checking if we have employees by key:");
 		System.out.println("Contains key 'Jones': " + hashMap.containsKey("Jones"));
@@ -147,7 +148,7 @@ public class MainHashTable {
 		System.out.println("contains key will pass the key and will find ");
 		System.out.println("faster by the key and containsValue() will traverse ");
 		System.out.println("all the list until find the value.");
-		
+
 		System.out.println();
 		System.out.println("Getting employees:");
 		System.out.println("Retrieve key 'Jones': " + hashMap.get("Jones"));
@@ -157,27 +158,50 @@ public class MainHashTable {
 		System.out.println("Removing employees Wilson and Jones:");
 		hashMap.remove("Wilson");
 		hashMap.remove("Jones");
-		hashMap.forEach((k,v) -> System.out.println("Key: '" + k + "', "+ v));
-		
+		hashMap.forEach((k, v) -> System.out.println("Key: '" + k + "', " + v));
+
 		System.out.println();
 		hashMap.put("Jones", billEnd);
 		System.out.println("If we add another employee with put(), with ");
 		System.out.println("a key that already being used, the old employee will ");
 		System.out.println("be replaced. ");
 		System.out.println("Adding 'Bill End' with the key 'Jones': ");
-		hashMap.forEach((k,v) -> System.out.println("Key: '" + k + "', "+ v));
-		
+		hashMap.forEach((k, v) -> System.out.println("Key: '" + k + "', " + v));
+
 		System.out.println();
 		hashMap.putIfAbsent("Jones", johnDoe);
 		System.out.println("If we add another employee with putIfAbsent(), ");
 		System.out.println("it'll add this employee only if the key ");
 		System.out.println("isn't been used. ");
 		System.out.println("Adding 'John Doe' to 'Jones' key: ");
-		hashMap.forEach((k,v) -> System.out.println("Key: '" + k + "', "+ v));
-		
+		hashMap.forEach((k, v) -> System.out.println("Key: '" + k + "', " + v));
+
 		System.out.println();
 		System.out.println("Example of getOrDefaul() method, trying to get 'Narciso' key");
 		System.out.println("and will return 'John Doe' if it doesn't find 'Narciso':");
 		System.out.println(hashMap.getOrDefault("Narciso", johnDoe));
+
+		System.out.println();
+		System.out.println();
+	}
+
+	private static void video80HashChallenge() {
+		System.out.println("::: VIDEO 80 HASH CHALLENGE :::");
+		int[] nums = new int[10];
+		int[] numsToAdd = { 59382, 43, 6894, 500, 99, -58 };
+
+		for (int i = 0; i < numsToAdd.length; i++) {
+			nums[hash(numsToAdd[i])] = numsToAdd[i];
+		}
+
+		for (int i = 0; i < nums.length; i++) {
+			System.out.println(nums[i]);
+		}
+
+	}
+
+	private static int hash(int value) {
+		//Returning the last digit of the value.
+		return Math.abs(value % 10);
 	}
 }
