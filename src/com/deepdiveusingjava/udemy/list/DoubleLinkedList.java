@@ -1,7 +1,6 @@
 package com.deepdiveusingjava.udemy.list;
 
 import com.deepdiveusingjava.udemy.model.Employee;
-import com.deepdiveusingjava.udemy.model.EmployeeNode;
 
 public class DoubleLinkedList {
 	public static void main(String[] args) {
