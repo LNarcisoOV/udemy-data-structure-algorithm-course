@@ -150,4 +150,18 @@ public class MainArray {
 		return intArray;
 	}
 
+	public static int[] createIntArrayForBinarySearchAlgorithm() {
+		int[] intArray = new int[7];
+
+		intArray[0] = -22;
+		intArray[1] = -15;
+		intArray[2] = 1;
+		intArray[3] = 7;
+		intArray[4] = 20;
+		intArray[5] = 35;
+		intArray[6] = 55;
+
+		return intArray;
+	}
+
 }
