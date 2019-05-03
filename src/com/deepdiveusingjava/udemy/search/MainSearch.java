@@ -4,10 +4,15 @@ import com.deepdiveusingjava.udemy.arrays.MainArray;
 
 public class MainSearch {
 	public static void main(String args[]) {
+		linearSearch();
+		
+	}
+
+	private static void linearSearch() {
 		System.out.println("::::: LINEAR SEARCH ALGORITHM :::::");
 		System.out.println("It's a simple search.");
-		System.out.println("We'll traverse the array until find '-15' value ");
-		System.out.println("and we'll store the position of '-15' in a variable.");
+		System.out.println("We'll traverse the array until find the wished value ");
+		System.out.println("and we'll store the position of wished value in a variable.");
 		System.out.println("BigO: O(n);");
 		System.out.println();
 		System.out.println("Our array: ");
@@ -35,7 +40,6 @@ public class MainSearch {
 				break;
 			}
 		}
-
 		return position;
 	}
 }
