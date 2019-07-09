@@ -2,7 +2,7 @@ package com.deepdiveusingjava.udemy.trees;
 
 public class MainTree {
 	public static void main(String args[]) {
-		System.out.println("::::: TREE ::::: \n");
+		System.out.println("::::: TREES ::::: ");
 		System.out.println("");
 		System.out.println("- Hierarchical data structure.");
 		System.out.println("- Each field in the tree is called 'Node'.");
@@ -21,20 +21,28 @@ public class MainTree {
 		System.out.println("");
 		System.out.println("::::: BINARY SEARCH TREE ::::: ");
 		System.out.println("- Every node has 0, 1 or 2 children, more than this isn't a binary tree.");
-		System.out.println("- Children are referred to as left child and right child.");
+		System.out.println("- Children are referred to as the left child and right child.");
 		System.out.println("- Binary search trees. ");
 		System.out.println("- Can perform insertions, deletions, and retrievals in O(logN) time. ");
 		System.out.println("- The left child always has a smaller value than its parent.");
 		System.out.println("- The right child always has a larger value than its parent.");
-		System.out.println("- This means, everythinh left to the root is less than the value of the root, ");
+		System.out.println("- This means, everything left to the root is less than the value of the root, ");
 		System.out.println("and everything right to the root is greater than the value of the root, because");
 		System.out.println("of that, we can do a binary search.");
 		System.out.println("");
+		System.out.println("::::: BINARY SEARCH TREE - TRAVERSAL ::::: ");
+		System.out.println("- There are 4 ways of traversal a binary tree:");
+		System.out.println("  - Level: Visit nodes on each level.");
+		System.out.println("  - Pre-order: visit the root of every subtree first.");
+		System.out.println("  - Post-order: visit the root of every subtree last.");
+		System.out.println("  - In-order: visit left child, then root, then the right child.");
+		System.out.println("");
 		
-		binarySearchTreeInsertion();
+		Tree intTree = binarySearchTreeInsertion();
+		binarySearchTreeTraversalInOrder(intTree);
 	}
 
-	private static void binarySearchTreeInsertion() {
+	private static Tree binarySearchTreeInsertion() {
 		Tree intTree = new Tree();
 		intTree.insert(25);
 		intTree.insert(20);
@@ -45,6 +53,15 @@ public class MainTree {
 		intTree.insert(26);
 		intTree.insert(22);
 		intTree.insert(32);
+		return intTree;
+		
+	}
+
+	private static void binarySearchTreeTraversalInOrder(Tree intTree) {
+		System.out.println("Traversing the tree in order: ");
+		System.out.print("Tree[");
+		intTree.traverseInOrder();
+		System.out.print("];");
 	}
 	
 	
