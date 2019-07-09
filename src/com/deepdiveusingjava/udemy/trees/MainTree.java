@@ -59,6 +59,8 @@ public class MainTree {
 		gettingMinimumAndMaximumValuesInTheTree(intTree);
 		System.out.println("");
 		deletingValuesInTheTree(intTree);
+		System.out.println("");
+		video100BinarySearchTreeChalenge1();
 	}
 
 	private static Tree binarySearchTreeInsertion() {
@@ -114,5 +116,16 @@ public class MainTree {
 		intTree.delete(25);
 		intTree.traverseInOrder();
 		System.out.println("]");
+	}
+	
+
+	private static void video100BinarySearchTreeChalenge1() {
+		Tree intTree = binarySearchTreeInsertion();
+		System.out.println("::::: VIDEO 100 BINARY SEARCH TREE CHALENGE #1 ::::: ");
+		System.out.println("Traversing pre order:");
+		intTree.traversePreOrder();
+		System.out.println();
+		System.out.println("Traversing post order:");
+		intTree.traversePostOrder();
 	}
 }
