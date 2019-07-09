@@ -37,9 +37,14 @@ public class MainTree {
 		System.out.println("  - Post-order: visit the root of every subtree last.");
 		System.out.println("  - In-order: visit left child, then root, then the right child.");
 		System.out.println("");
+		System.out.println("");
 		
 		Tree intTree = binarySearchTreeInsertion();
 		binarySearchTreeTraversalInOrder(intTree);
+		System.out.println("");
+		gettingNodeByValuesInTheTree(intTree);
+		System.out.println("");
+		gettingMinimumAndMaximumValuesInTheTree(intTree);
 	}
 
 	private static Tree binarySearchTreeInsertion() {
@@ -54,32 +59,28 @@ public class MainTree {
 		intTree.insert(22);
 		intTree.insert(32);
 		return intTree;
-		
+
 	}
 
 	private static void binarySearchTreeTraversalInOrder(Tree intTree) {
 		System.out.println("Traversing the tree in order: ");
 		System.out.print("Tree[");
 		intTree.traverseInOrder();
-		System.out.print("];");
+		System.out.println("];");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	private static void gettingNodeByValuesInTheTree(Tree intTree) {
+		System.out.println("Getting tree node by values:");
+		System.out.println("Getting tree by value 15: " + intTree.get(15));
+		System.out.println("Getting tree by value 32: " + intTree.get(32));
+		System.out.println("Getting tree by value 514: " + intTree.get(514));
+		System.out.println("Getting tree by value 22: " + intTree.get(22));
+	}
+
+	private static void gettingMinimumAndMaximumValuesInTheTree(Tree intTree) {
+		System.out.println("Getting minimum and maximum values in the tree:");
+		System.out.println("Minimum value: " + intTree.min());
+		System.out.println("Maximum value: " + intTree.max());
+	}
+
 }

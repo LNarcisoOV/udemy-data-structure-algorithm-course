@@ -1,43 +1,77 @@
 package com.deepdiveusingjava.udemy.trees;
 
 public class TreeNode {
-	
+
 	private int data;
 	private TreeNode leftChild;
 	private TreeNode rightChild;
-	
-	public void insert(int value){
-		if(value == data){
+
+	public TreeNode(int data) {
+		this.data = data;
+	}
+
+	public void insert(int value) {
+		if (value == data) {
 			return;
 		}
-		
-		if(value < data){
-			if(leftChild == null){
+
+		if (value < data) {
+			if (leftChild == null) {
 				leftChild = new TreeNode(value);
-			}else{
+			} else {
 				leftChild.insert(value);
 			}
-		}else{
-			if(rightChild == null){
+		} else {
+			if (rightChild == null) {
 				rightChild = new TreeNode(value);
-			}else{
+			} else {
 				rightChild.insert(value);
 			}
 		}
 	}
-	
-	public void traverseInOrder(){
-		if(leftChild != null){
-			leftChild.traverseInOrder();
+
+	public TreeNode get(int value) {
+		if (value == data) {
+			return this;
 		}
-		System.out.print(" " + data + ", ");
-		if(rightChild != null){
-			rightChild.traverseInOrder();
+
+		if (value < data) {
+			if (leftChild != null) {
+				return leftChild.get(value);
+			}
+		} else {
+			if (rightChild != null) {
+				return rightChild.get(value);
+			}
+		}
+
+		return null;
+	}
+
+	public int min() {
+		if (leftChild == null) {
+			return data;
+		} else {
+			return leftChild.min();
 		}
 	}
 
-	public TreeNode(int data) {
-		this.data = data;
+	public int max() {
+		if (rightChild == null) {
+			return data;
+		} else {
+			return rightChild.max();
+		}
+	}
+
+	public void traverseInOrder() {
+		if (leftChild != null) {
+			leftChild.traverseInOrder();
+		}
+		System.out.print(" " + data + ", ");
+		if (rightChild != null) {
+			rightChild.traverseInOrder();
+		}
 	}
 
 	public int getData() {
@@ -62,5 +96,10 @@ public class TreeNode {
 
 	public void setRightChild(TreeNode rightChild) {
 		this.rightChild = rightChild;
+	}
+
+	@Override
+	public String toString() {
+		return "TreeNode [data=" + data + "]";
 	}
 }
