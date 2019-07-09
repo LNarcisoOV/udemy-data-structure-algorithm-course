@@ -19,7 +19,7 @@ public class MainTree {
 		System.out.println("this tree has only the root node.");
 		System.out.println("- Every node with descendants(children) is called Subtree.");
 		System.out.println("");
-		System.out.println("::::: BINARY TREE ::::: ");
+		System.out.println("::::: BINARY SEARCH TREE ::::: ");
 		System.out.println("- Every node has 0, 1 or 2 children, more than this isn't a binary tree.");
 		System.out.println("- Children are referred to as left child and right child.");
 		System.out.println("- Binary search trees. ");
@@ -31,7 +31,38 @@ public class MainTree {
 		System.out.println("of that, we can do a binary search.");
 		System.out.println("");
 		
-		
-		
+		binarySearchTreeInsertion();
 	}
+
+	private static void binarySearchTreeInsertion() {
+		Tree intTree = new Tree();
+		intTree.insert(25);
+		intTree.insert(20);
+		intTree.insert(15);
+		intTree.insert(27);
+		intTree.insert(30);
+		intTree.insert(29);
+		intTree.insert(26);
+		intTree.insert(22);
+		intTree.insert(32);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
