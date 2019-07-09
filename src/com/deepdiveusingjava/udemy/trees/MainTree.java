@@ -37,14 +37,28 @@ public class MainTree {
 		System.out.println("  - Post-order: visit the root of every subtree last.");
 		System.out.println("  - In-order: visit left child, then root, then the right child.");
 		System.out.println("");
-		System.out.println("");
-		
+		System.out.println("::::: DELETE NODE ::::: ");
+		System.out.println("- Case 1: Node is a leaf.");
+		System.out.println("- Case 2: Node has one child.");
+		System.out.println("- Case 3: Node has two children.");
+		System.out.println("  In the case 3, we have some situation:");
+		System.out.println("  - Need to figure out what the replacement node will be.");
+		System.out.println("  - What minimal disruption to the existing tree structure.");
+		System.out.println("  - Can take de replacement node from the deleted node's left or right subtree.");
+		System.out.println("  - If taking it from the left subtree, we have to take the largest value in");
+		System.out.println("  the left subtree.");
+		System.out.println("  - If taking it from the right subtree, we have to take the smallest value in");
+		System.out.println("  the right subtree.");
+		System.out.println("  - Choose one and stick to it.");
+
 		Tree intTree = binarySearchTreeInsertion();
 		binarySearchTreeTraversalInOrder(intTree);
 		System.out.println("");
 		gettingNodeByValuesInTheTree(intTree);
 		System.out.println("");
 		gettingMinimumAndMaximumValuesInTheTree(intTree);
+		System.out.println("");
+		deletingValuesInTheTree(intTree);
 	}
 
 	private static Tree binarySearchTreeInsertion() {
@@ -83,4 +97,22 @@ public class MainTree {
 		System.out.println("Maximum value: " + intTree.max());
 	}
 
+	private static void deletingValuesInTheTree(Tree intTree) {
+		System.out.println("Deleting values in the tree:");
+		System.out.print("Original Tree[");
+		intTree.traverseInOrder();
+		System.out.println("]");
+		System.out.print("Deleting 15: Tree[");
+		intTree.delete(15);
+		intTree.traverseInOrder();
+		System.out.println("]");
+		System.out.print("Deleting 27: Tree[");
+		intTree.delete(27);
+		intTree.traverseInOrder();
+		System.out.println("]");
+		System.out.print("Deleting 25(ROOT): Tree[");
+		intTree.delete(25);
+		intTree.traverseInOrder();
+		System.out.println("]");
+	}
 }
