@@ -34,6 +34,8 @@ public class MainHeap {
 		System.out.println("]");
 		System.out.println();
 		deleteSomeNodes(heap);
+		System.out.println();
+		peekingTheRoot();
 	}
 
 	private static Heap createHeapBinaryTree() {
@@ -65,6 +67,17 @@ public class MainHeap {
 		System.out.print("HEAP[");
 		heap.delete(5);
 		heap.printHeap();
-		System.out.print("]");
+		System.out.println("]");
+	}
+	
+	private static void peekingTheRoot() {
+		System.out.println("Peeking values in the HEAP. "); 
+		System.out.print("ORIGINAL HEAP[");
+		Heap heap = createHeapBinaryTree();
+		System.out.println("]");
+		System.out.println("Peeking the original ROOT: " + heap.peek());
+		heap.delete(0);
+		System.out.print("Deleting root of the HEAP and peeking the new root: ");
+		System.out.println(heap.peek());
 	}
 }

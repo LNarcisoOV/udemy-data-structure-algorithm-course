@@ -8,7 +8,7 @@ public class Heap {
 	public Heap(int capacity) {
 		heap = new int[capacity];
 	}
-
+	
 	public void insert(int value) {
 		if (isFull()) {
 			throw new ArrayIndexOutOfBoundsException("Heap is full.");
@@ -37,6 +37,14 @@ public class Heap {
 		size--;
 		
 		return deletedValue;
+	}
+	
+	public int peek(){
+		if(isEmpty()){
+			throw new ArrayIndexOutOfBoundsException("HEAP is empty.");
+		}
+		
+		return heap[0];
 	}
 
 	private void fixHeapAbove(int index) {
